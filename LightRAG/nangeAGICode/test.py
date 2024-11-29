@@ -9,7 +9,6 @@ from lightrag.llm import openai_complete_if_cache
 
 
 
-
 # 模型全局参数配置  根据自己的实际情况进行调整
 OPENAI_API_BASE = "https://api.wlai.vip/v1"
 OPENAI_CHAT_API_KEY = "sk-dUWW1jzueJ4lrDixWaPsq7nnyN5bCucMzvldpNJwfJlIvAcC"
