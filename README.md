@@ -101,12 +101,12 @@ pip install graphrag==0.5.0
 ## 4.1 LightRAG测试
 ### (1)构建索引
 打开命令行终端，执行如下指令         
-cd LightRAG           
+cd LightRAG/nangeAGICode                       
 python test.py                
 **注意** 在运行脚本之前，需要调整相关代码将如下代码块打开，检索相关的代码块注释         
 ### (2)逐一测试
 执行如下指令         
-cd LightRAG           
+cd LightRAG/nangeAGICode                
 python test.py                
 **注意** 在运行脚本之前，需要注释如下构建索引代码，取消检索相关的代码块注释                  
 
