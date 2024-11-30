@@ -31,7 +31,7 @@ GraphRAG 是一种基于大型语言模型 (LLM) 的技术，用于从非结构�
 DRIFT 搜索通过整合社区信息，使本地搜索的起点更为宽泛，能够检索更多类型的事实，从而提升查询的详细性            
 DRIFT 在 GraphRAG 的查询引擎基础上进一步扩展，为本地搜索提供了更精细的分层查询方式，使其能够处理与预定义模板不完全匹配的复杂查询             
 ### (4)相关GrahRAG视频
-GraphRAG(基于知识图谱的RAG)系列合集                       
+《南哥AGI研习社》GraphRAG(基于知识图谱的RAG)系列合集                       
 https://space.bilibili.com/509246474                                 
 https://www.youtube.com/playlist?list=PL8zBXedQ0uflcyD-_ghqmjpv1lAdRdKJ-              
 
