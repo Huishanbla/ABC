@@ -7,8 +7,8 @@
 (3)GraphRAG构建索引、Local检索、Global检索、Drift检索                                                                      
 (4)LightRAG与GraphRAG在索引构建、检索测试中的耗时、模型请求次数、Token消耗金额、检索质量等方面进行对比                    
 **本次分享视频:**                       
-
-https://youtu.be/-O5ATdQcefo               
+https://www.bilibili.com/video/BV1CmzEYcEnS/?vd_source=30acb5331e4f5739ebbad50f7cc6b949                     
+https://youtu.be/-O5ATdQcefo                            
 
 ## 1.2 GraphRAG介绍
 ### (1)简介
