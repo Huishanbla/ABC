@@ -5,7 +5,10 @@
 (1)搭建LightRAG、GraphRAG                          
 (2)LightRAG构建索引、naive检索、Local检索、Global检索、Hybrid检索                            
 (3)GraphRAG构建索引、Local检索、Global检索、Drift检索                                                                      
-(4)LightRAG与GraphRAG在索引构建、检索测试中的耗时、模型请求次数、Token消耗金额、检索质量等方面进行对比                              
+(4)LightRAG与GraphRAG在索引构建、检索测试中的耗时、模型请求次数、Token消耗金额、检索质量等方面进行对比                    
+**本次分享视频:**                       
+
+https://youtu.be/-O5ATdQcefo               
 
 ## 1.2 GraphRAG介绍
 ### (1)简介
