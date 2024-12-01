@@ -7,9 +7,12 @@
 (3)GraphRAG构建索引、Local检索、Global检索、Drift检索                                                                      
 (4)LightRAG与GraphRAG在索引构建、检索测试中的耗时、模型请求次数、Token消耗金额、检索质量等方面进行对比         
 **相关视频:**            
-LightRAG与GraphRAG对比评测，从索引构建、本地检索、全局检索、混合检索等维度对请求大模型次数、Token消耗、金额消耗、检索质量等方面进行全面对比                    
+(1)LightRAG与GraphRAG对比评测，从索引构建、本地检索、全局检索、混合检索等维度对请求大模型次数、Token消耗、金额消耗、检索质量等方面进行全面对比                    
 https://www.bilibili.com/video/BV1CmzEYcEnS/?vd_source=30acb5331e4f5739ebbad50f7cc6b949                       
 https://youtu.be/-O5ATdQcefo             
+(2)GraphRAG发布重大更新！增量更新索引终于来并新增DRIFT图推理搜索查询，带你手把手全流程实操新功能，源码分析，同时支持GPT、国产大模型、本地大模型等              
+https://youtu.be/7WFMd8U8C7E            
+
 
 **12月01日分享内容:本次分享主要内容为:**                               
 (1)LightRAG批量及增量构建索引，支持TXT、PDF、DOCX、PPTX、CSV等                                                                   
