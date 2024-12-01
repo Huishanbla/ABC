@@ -1,14 +1,21 @@
 # 1、项目介绍
 ## 1.1、本次分享介绍
 本期项目对GraphRAG和LightRAG进行对比测试          
-**本次分享主要内容为:**                               
+**11月29日分享内容:本次分享主要内容为:**                               
 (1)搭建LightRAG、GraphRAG                          
 (2)LightRAG构建索引、naive检索、Local检索、Global检索、Hybrid检索                            
 (3)GraphRAG构建索引、Local检索、Global检索、Drift检索                                                                      
-(4)LightRAG与GraphRAG在索引构建、检索测试中的耗时、模型请求次数、Token消耗金额、检索质量等方面进行对比                    
-**本次分享视频:**                       
-https://www.bilibili.com/video/BV1CmzEYcEnS/?vd_source=30acb5331e4f5739ebbad50f7cc6b949                     
-https://youtu.be/-O5ATdQcefo                            
+(4)LightRAG与GraphRAG在索引构建、检索测试中的耗时、模型请求次数、Token消耗金额、检索质量等方面进行对比         
+**相关视频:**            
+LightRAG与GraphRAG对比评测，从索引构建、本地检索、全局检索、混合检索等维度对请求大模型次数、Token消耗、金额消耗、检索质量等方面进行全面对比                    
+https://www.bilibili.com/video/BV1CmzEYcEnS/?vd_source=30acb5331e4f5739ebbad50f7cc6b949                       
+https://youtu.be/-O5ATdQcefo             
+
+**12月01日分享内容:本次分享主要内容为:**                               
+(1)LightRAG批量及增量构建索引，支持TXT、PDF、DOCX、PPTX、CSV等                                                                   
+(3)LightRAG生成的知识图谱可视化展示，html方式和neo4j数据库方式                                                                                       
+(4)LightRAG与GraphRAG基于neo4j数据库进行知识图谱可视化进行质量评测                                                                     
+ 
 
 ## 1.2 GraphRAG介绍
 ### (1)简介
@@ -34,7 +41,7 @@ GraphRAG 是一种基于大型语言模型 (LLM) 的技术，用于从非结构�
 DRIFT 搜索通过整合社区信息，使本地搜索的起点更为宽泛，能够检索更多类型的事实，从而提升查询的详细性            
 DRIFT 在 GraphRAG 的查询引擎基础上进一步扩展，为本地搜索提供了更精细的分层查询方式，使其能够处理与预定义模板不完全匹配的复杂查询             
 ### (4)相关GrahRAG视频
-《南哥AGI研习社》GraphRAG(基于知识图谱的RAG)系列合集                       
+GraphRAG(基于知识图谱的RAG)系列合集                       
 https://space.bilibili.com/509246474                                 
 https://www.youtube.com/playlist?list=PL8zBXedQ0uflcyD-_ghqmjpv1lAdRdKJ-              
 
@@ -94,22 +101,22 @@ https://gitee.com/NanGePlus/LightRAGTest
 cd LightRAG                    
 pip install -e .                   
 cd GraphRAG             
-pip install graphrag==0.5.0                
+pip install graphrag==0.5.0                   
 
 
-# 4、项目测试
+# 4、11月29日分享内容相关测试
 **测试文本** 测试文本均为使用西游记白话文前九回内容，文件名为book.txt                             
 **模型配置** 大模型使用OpenAI(代理方案)，Chat模型均使用gpt-4o-mini,Embedding模型均使用text-embedding-3-small                        
 **其他配置** 笔记本均为MacBook Pro2017,网速、python环境均相同                
 ## 4.1 LightRAG测试
 ### (1)构建索引
 打开命令行终端，执行如下指令         
-cd LightRAG/nangeAGICode                       
+cd LightRAG/nangeAGICode                      
 python test.py                
 **注意** 在运行脚本之前，需要调整相关代码将如下代码块打开，检索相关的代码块注释         
 ### (2)逐一测试
 执行如下指令         
-cd LightRAG/nangeAGICode                
+cd LightRAG/nangeAGICode                   
 python test.py                
 **注意** 在运行脚本之前，需要注释如下构建索引代码，取消检索相关的代码块注释                  
 
@@ -123,22 +130,74 @@ graphrag query --root ./ --method local --query "这个故事的核心主题是�
 graphrag query --root ./ --method global --query "这个故事的核心主题是什么?"                  
 graphrag query --root ./ --method drift --query "这个故事的核心主题是什么?"             
 
-
-# 5、对比测试结论一览表
-<img src="./img.png" alt="" width="1200" />           
-
+## 4.3 对比测试结论一览表
+<img src="./img.png" alt="" width="1200" />         
 
 
+# 5、12月01日分享内容相关测试
+**测试文本** 测试文本均为使用西游记白话文前九回内容                                             
+**模型配置** 大模型均使用OpenAI(代理方案)，Chat模型均使用gpt-4o,Embedding模型均使用text-embedding-3-small                        
+**其他配置** 笔记本均为MacBook Pro2017,网速、python环境均相同            
 
+## 5.1 LightRAG构建索引测试
+### (1)安装textract依赖包          
+通过指令 pip install textract 安装时会报错，报错的原因是                               
+其元数据文件中使用了不再被支持的版本约束符号（<=0.29.*），而当前 pip 和 setuptools 不再接受这种格式        
+解决方案:下载依赖包源码，修改相应参数后本地进行安装                            
+https://pypi.org/project/textract/1.6.5/#description                        
+cd textract-1.6.5                        
+pip install .                  
 
+### (2) 创建neo4j数据库实例    
+推荐使用云服务进行测试，链接地址如下:                    
+https://console-preview.neo4j.io/tools/query                    
+注册登录成功，直接新建实例即可                 
 
+### (3)增量索引构建及知识图谱可视化测试
+运行如下指令进行索引构建                             
+cd LightRAG/nangeAGICode1201                  
+python insertTest.py                    
+python queryTest.py            
+每一次构建完成，先清除数据库中的数据再运行如下指令进行可视化          
+在运行之前需要根据自己的实际情况进行参数的调整            
+python graph_visual_with_html.py              
+python graph_visual_with_neo4j.py             
+在数据库中进行查询测试           
+MATCH (n:`PERSON`)                     
+WHERE n.displayName CONTAINS '唐僧'                     
+RETURN n LIMIT 25;                      
 
+MATCH (n:`PERSON`)                   
+WHERE n.displayName CONTAINS '八戒'                  
+RETURN n LIMIT 25;               
+           
+MATCH (n:`PERSON`)                   
+WHERE n.displayName CONTAINS '沙和尚'                        
+RETURN n LIMIT 25;                       
 
+**清除数据**                         
+MATCH (n)                
+CALL { WITH n DETACH DELETE n } IN TRANSACTIONS OF 25000 ROWS;               
 
+### (4)LightRAG和GraphRAG生成的知识图谱对比           
+运行如下指令将GraphRAG生成的知识图谱进行可视化展示            
+cd GraphRAG/utils                    
+python graph_visual_with_neo4j.py                 
+在运行脚本前根据自己的实际情况进行调整,修改文件所在路径为存储增量数据的文件路径                                            
+GRAPHRAG_FOLDER="/Users/janetjiang/Desktop/agi_code/LightRAGTest/GraphRAG/output"            
+在数据库中进行查询测试                           
+MATCH (n:`__Entity__`)          
+WHERE n.name CONTAINS '唐僧'                
+RETURN n LIMIT 25;             
 
+MATCH (n:`__Entity__`)                 
+WHERE n.name CONTAINS '八戒'                  
+RETURN n LIMIT 25;      
 
+MATCH (n:`__Entity__`)                  
+WHERE n.name CONTAINS '沙和尚'                   
+RETURN n LIMIT 25;         
 
-
-
-
-
+**清除数据**                            
+MATCH (n)                 
+CALL { WITH n DETACH DELETE n } IN TRANSACTIONS OF 25000 ROWS;            
