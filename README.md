@@ -13,8 +13,8 @@ https://youtu.be/-O5ATdQcefo
 
 **12月01日分享内容:本次分享主要内容为:**                               
 (1)LightRAG批量及增量构建索引，支持TXT、PDF、DOCX、PPTX、CSV等                                                                   
-(3)LightRAG生成的知识图谱可视化展示，html方式和neo4j数据库方式                                                                                       
-(4)LightRAG与GraphRAG基于neo4j数据库进行知识图谱可视化进行质量评测                                                                     
+(2)LightRAG生成的知识图谱可视化展示，html方式和neo4j数据库方式                                                                                       
+(3)LightRAG与GraphRAG基于neo4j数据库进行知识图谱可视化进行质量评测                                                                     
  
 
 ## 1.2 GraphRAG介绍
