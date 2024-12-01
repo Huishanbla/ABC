@@ -6,7 +6,7 @@
 (2)LightRAG构建索引、naive检索、Local检索、Global检索、Hybrid检索                            
 (3)GraphRAG构建索引、Local检索、Global检索、Drift检索                                                                      
 (4)LightRAG与GraphRAG在索引构建、检索测试中的耗时、模型请求次数、Token消耗金额、检索质量等方面进行对比         
-**相关视频:**            
+相关视频:                      
 (1)LightRAG与GraphRAG对比评测，从索引构建、本地检索、全局检索、混合检索等维度对请求大模型次数、Token消耗、金额消耗、检索质量等方面进行全面对比                    
 https://www.bilibili.com/video/BV1CmzEYcEnS/?vd_source=30acb5331e4f5739ebbad50f7cc6b949                       
 https://youtu.be/-O5ATdQcefo             
@@ -20,6 +20,7 @@ https://youtu.be/7WFMd8U8C7E
 (2)LightRAG生成的知识图谱可视化展示，html方式和neo4j数据库方式                                                                                       
 (3)LightRAG与GraphRAG基于neo4j数据库进行知识图谱可视化进行质量评测                 
 相关视频:              
+https://www.bilibili.com/video/BV1xXzoYGEJw/                
 https://youtu.be/-IiyHQQdn34            
 
  
