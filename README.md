@@ -11,7 +11,8 @@
 https://www.bilibili.com/video/BV1CmzEYcEnS/?vd_source=30acb5331e4f5739ebbad50f7cc6b949                       
 https://youtu.be/-O5ATdQcefo             
 (2)GraphRAG发布重大更新！增量更新索引终于来并新增DRIFT图推理搜索查询，带你手把手全流程实操新功能，源码分析，同时支持GPT、国产大模型、本地大模型等              
-https://youtu.be/7WFMd8U8C7E            
+https://www.bilibili.com/video/BV1AADaYfE2T/                   
+https://youtu.be/7WFMd8U8C7E                  
 
 
 **12月01日分享内容:本次分享主要内容为:**                               
